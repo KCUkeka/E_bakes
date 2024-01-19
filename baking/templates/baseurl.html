@@ -1,0 +1,32 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django App{% endblock %}</title>
+</head>
+<body>
+
+<div id="header">
+    <h1>{% block header %}My Django App{% endblock %}</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+</div>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+
+<div id="footer">
+    <p>&copy; 2024 My Django App. All rights reserved.</p>
+</div>
+
+</body>
+</html>
