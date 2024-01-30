@@ -3,5 +3,7 @@ from .import views
 
 #URL conf
 urlpatterns = [
-    path('welcome/', views.welcome)
+    path('', views.welcome),
+    path('index/', views.index)
+    
 ]

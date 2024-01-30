@@ -6,39 +6,60 @@
     <title>Welcome to Ethalle Bakes</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f8f8f8;
+            color: #333;
             margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            padding: 0;
         }
 
-        .welcome-container {
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 1em;
             text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #4caf50;
-        }
-
-        p {
-            color: #333;
         }
     </style>
 </head>
 <body>
-
-    <div class="welcome-container">
+    <header>
         <h1>Welcome to Ethalle Bakes</h1>
-        <p>Delicious treats made with love</p>
-        <!-- You can add more content or links here as needed -->
-    </div>
-
+        <nav>
+            <a href="#about">About</a>
+            <a href="#desserts">Desserts</a>
+        </nav>
+    </header>
+    <main>
+        <p>We're delighted to have you here! Explore our delicious bakes and treats.</p>
+        <p>At Ethalle Bakes, we are passionate about creating mouthwatering desserts that bring joy to your taste buds. Whether you have a sweet tooth or just looking for a delightful treat, you're in the right place.</p>
+        <p>Take a moment to browse through our menu and discover a variety of baked goods crafted with love and care.</p>
+        <p>Thank you for choosing Ethalle Bakes. Enjoy your journey into the world of sweetness!</p>
+    </main>
 </body>
 </html>
