@@ -1,14 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import Bakery
 
 # Create your views here.
 
 def welcome (request):
-    return render (request, 'welcome.html')
+    bakery = Bakery.objects.all()
+    return render (request, 'welcome.html', { 'bakery': bakery})
 
 def index (request):
     return render (request, 'index.html')
 
+def about (request):
+    return render (request, 'about.html')
 
 
 # this is for my baseurl and home templates

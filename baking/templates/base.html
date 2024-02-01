@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Ethalle Bakes</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 0.5em;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em;
+        margin: 0 1em;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Ethalle Cakes & Bakes</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#desserts">Desserts</a>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock %}
+
+  </body>
+</html>

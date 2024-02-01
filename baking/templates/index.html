@@ -1,9 +1,13 @@
+<!-- index.html -->
 {%load static%}
+
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Home page</title>
+	<title>{% block title %} Welcome  {% endblock %}</title>
+    {% block content %} 
+    {% comment %} This portion should be copied to other pages. Ending at 126 {% endcomment %}
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +61,7 @@
 
 					<div class="navbar-brand">
 						<a href="index.html">
-							<img src="images/main-logo.png" alt="logo">
+							<img src="https://i.imgur.com/Hjtx9KH.png"  width="132" height="83" class="img-fluid">
 						</a>
 					</div>
 
@@ -71,7 +75,7 @@
 						<ul class="navbar-nav list-inline text-uppercase">
 							<li class="nav-item text-hover active"><a href="index.html" class="nav-link"
 									data-effect="Home">Home</a></li>
-							<li class="nav-item text-hover"><a href="about.html" class="nav-link"
+							<li class="nav-item text-hover"><a href="/about" class="nav-link"
 									data-effect="About Us">About us</a></li>
 							<li class="nav-item text-hover"><a href="blog.html" class="nav-link"
 									data-effect="Blogs">Blog</a></li>
@@ -82,7 +86,7 @@
 								<a href="#" data-bs-toggle="dropdown" aria-expanded="false"
 									class="nav-link dropdown-toggle">Pages</a>
 								<ul class="dropdown-menu">
-									<li><a href="about.html" class="dropdown-item">About us <span class="badge bg-primary"></span></a></li>
+									<li><a href="/about" class="dropdown-item">About us <span class="badge bg-primary"></span></a></li>
 									<li><a href="blog.html" class="dropdown-item">Blog <span class="badge bg-primary"></span></a></li>
 									<li><a href="single-post.html" class="dropdown-item">Single Post <span class="badge bg-primary"></span></a></li>
 									<li><a href="contact.html" class="dropdown-item">Contact us <span class="badge bg-primary"></span></a></li>
@@ -119,6 +123,9 @@
 	</header>
 
 </div><!--header-wrap-->
+
+{% comment %} This portion should be copied for other pages. Starting from 9 {% endcomment %}
+{% endblock %}
 
 <section id="billboard">
 	<div class="main-slider">
@@ -254,7 +261,7 @@
 
 </section>
 
-<section class="about-us margin-medium">
+{% comment %} <section class="about-us margin-medium">
 	<div class="container">
 		<div class="row">
 			<div class="nav-tabs-wrap products-tab">
@@ -366,7 +373,7 @@
 		</div>
 	</div>
 
-</section>
+</section> {% endcomment %}
 
 <section class="best-products margin-large">
 	<div class="container">

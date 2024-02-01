@@ -1,65 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Ethalle Bakes</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+{% extends "base.html" %} {% block content %}
+<main>
+  <h1>Hi and welcome to my page</h1>
+  <p>
+    We're delighted to have you here! Explore our delicious bakes and treats.
+  </p>
+  <p>
+    At Ethalle Bakes, we are passionate about creating mouthwatering desserts
+    that bring joy to your taste buds. Whether you have a sweet tooth or just
+    looking for a delightful treat, you're in the right place.
+  </p>
+  <p>
+    Take a moment to browse through our menu and discover a variety of baked
+    goods crafted with love and care.
+  </p>
+  <p>
+    Thank you for choosing Ethalle Bakes. Enjoy your journey into the world of
+    sweetness!
+  </p>
+  <p></p>
 
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+  <h2>Check out our items</h2>
+  <div class="row">
+    {% for bakery in bakery %}
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <img src="{{ bakery.image }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ bakery.item }}</h5>
+          <p class="card-text">${{ bakery.price }}</p>
+          <a href="#" class="btn btn-primary">Add to cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</main>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 0.5em;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1em;
-            margin: 0 1em;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Ethalle Bakes</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#desserts">Desserts</a>
-        </nav>
-    </header>
-    <main>
-        <p>We're delighted to have you here! Explore our delicious bakes and treats.</p>
-        <p>At Ethalle Bakes, we are passionate about creating mouthwatering desserts that bring joy to your taste buds. Whether you have a sweet tooth or just looking for a delightful treat, you're in the right place.</p>
-        <p>Take a moment to browse through our menu and discover a variety of baked goods crafted with love and care.</p>
-        <p>Thank you for choosing Ethalle Bakes. Enjoy your journey into the world of sweetness!</p>
-    </main>
-</body>
-</html>
+{% endblock %}
